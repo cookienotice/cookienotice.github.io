@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Soft Dark Theme For Cookie Notice</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" as="style">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./cookienotice.min.css">
+	<style>
+	body {
+		font-family: 'Outfit', Arial, Helvetica, sans-serif;
+		color: #333;
+	}
+	center {
+		padding: 3rem;
+	}
+	h1 {
+		display: inline-block;
+		margin-bottom: 1rem;
+		padding: 0.5rem 1.5rem;
+		border: 2px dashed #333;
+		border-radius: 1rem;
+		font-size: 3rem;
+		font-weight: 900;
+	}
+	h2 {
+		margin-bottom: 2rem;
+		font-weight: 700;
+		color: #aaa;
+	}
+	#show-notice {
+		padding: 0.5rem 1rem;
+		border: 1px solid #3498db;
+		border-radius: 0.25rem;
+		text-decoration: none;
+		color: #3498db;
+	}
+	#show-notice:hover {
+		background-color: #3498db;
+		color: #fff;
+	}
+	#btn-dark-mode {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		border: 1px solid #ccc;
+		border-radius: 0.25rem;
+		background-color: #eee;
+		cursor: pointer;
+	}
+	body.dark-mode {
+		background-color: #333;
+	}
+	.dark-mode h1 {
+		color: #f1f1f1;
+		border-color: #aaa;
+	}
+	.dark-mode #btn-dark-mode {
+		border-color: #aaa;
+		background-color: #444;
+		color: #eee;
+	}
+	</style>
+</head>
+<body>
+
+	<button id="btn-dark-mode" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+			<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+		</svg>
+	</button>
+
+	<center>
+		<h1>Soft Dark</h1>
+		<h2>Cookie Notice Theme Preview</h2>
+		<p>
+			<a href="javascript:void(0)" id="show-notice" onclick="showCookieNoticeDemo()">Show Cookie Notice</a>
+		</p>
+
+	</center>
+
+	<div id="cookie-notice">
+		We use cookies to deliver better experience.
+		<a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer">More info</a>
+		<a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()">&times;</a>
+	</div>
+
+	<script>
+	function closeCookieNotice() {
+		const nowDate = new Date();
+		const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();
+		document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";
+		document.getElementById("cookie-notice").style.display = "none";
+	};
+	function showCookieNoticeDemo() {
+		document.getElementById("cookie-notice").style.display = "block";
+	};
+	document.addEventListener("DOMContentLoaded", function() {
+		const cookie_notice = ('; ' + document.cookie).split('; cookie_notice=').pop().split(';')[0];
+		if (cookie_notice !== "0") {
+			document.getElementById("cookie-notice").style.display = "block";
+		}
+	});
+	function toggleDarkMode() {
+		document.body.classList.toggle("dark-mode");
+	};
+	</script>
+
+</body>
+</html>

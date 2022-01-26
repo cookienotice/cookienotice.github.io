@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="h-100">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Know more about the HTTP Cookies. How the cookies works and what you need to know about cookie tracking.">
+	<meta name="tags" content="cookie, browser cookies, web cookies, eu cookies, http cookies, cookies, tracking">
+	<title>About HTTP Cookies | Cookie Notice</title>
+	<link rel="shortcut icon" href="../assets/img/favicon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" as="style">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../assets/css/styles.css" />
+	<style>
+	#about-cookies-content {
+		background-color: #fff;
+		box-shadow: 0 0 01rem rgba(0, 0, 0, 0.05);
+	}
+	#cookie-notice {
+		display: none;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		max-width: 450px;
+		margin: auto;
+		padding: 0.5rem;
+		border: 1px solid #eee;
+		background-color: #fefefe;
+		box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.05);
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 22px;
+		font-size: 15px;
+		text-align: center;
+		color: #555;
+	}
+	.cookie-notice-more {
+		margin: 0 0.25rem;
+		text-decoration-style: dashed;
+		color: inherit;
+	}
+	.cookie-notice-close {
+		padding: 0 0.5rem;
+		border: 1px solid #ddd;
+		border-radius: 0.125rem;
+		line-height: 20px;
+		text-decoration: none;
+		color: #888;
+	}
+	@media only screen and (min-width: 768px) {
+		h1 {
+			font-size: 3.33rem;
+		}
+		#cookie-notice {
+	  		bottom: 1rem;
+	  		border-radius: 0.25rem;
+		}
+		.cookie-notice-close {
+			float: right;
+		}
+	}
+	</style>
+</head>
+<body class="d-flex flex-column h-100">
+	<main class="container">
+
+		<div class="px-lg-4 py-4 py-lg-5">
+
+			<h1 class="mb-4 mb-lg-5 title-gradient text-center"><a href="./" class="text-decoration-none">About Cookies</a></h1>
+
+			<div class="col-lg-8 mx-auto p-3 px-lg-5 py-lg-4" id="about-cookies-content">
+
+				<h2 class="mb-4 text-center">What HTTP cookies are</h2>
+
+				<p><strong>HTTP cookies</strong> (also called <strong>web cookies</strong>, <strong>Internet cookies</strong>, <strong>browser cookies</strong>, or simply <strong>cookies</strong>) are small blocks of data created by a web server while a user is browsing a website and placed on the user's computer or other device by the user’s web browser. Cookies are placed on the device used to access a website, and more than one cookie may be placed on a user’s device during a session.</p>
+
+				<p>Cookies serve useful and sometimes essential functions on the web. They enable web servers to store stateful information (such as items added in the shopping cart in an online store) on the user’s device or to track the user's browsing activity (including clicking particular buttons, logging in, or recording which pages were visited in the past). They can also be used to save for subsequent use information that the user previously entered into form fields, such as names, addresses, passwords, and payment card numbers.</p>
+
+				<h2 class="mb-4 text-center">Type of cookies</h2>
+
+				<p><strong>Authentication cookies</strong> are commonly used by web servers to authenticate that a user is logged in, and with which account they are logged in. Without the cookie, users would need to authenticate themselves by logging in on each page containing sensitive information that they wish to access. The security of an authentication cookie generally depends on the security of the issuing website and the user's web browser, and on whether the cookie data is encrypted.</p>
+
+				<p>When the user visits a website's login page, the web server typically sends the client a cookie containing a unique session identifier. When the user successfully logs in, the server remembers that that particular session identifier has been authenticated and grants the user access to its services. </p>
+
+				<p>Because session cookies only contain a unique session identifier, this makes the amount of personal information that a website can save about each user virtually limitless—the website is not limited to restrictions concerning how large a cookie can be. Session cookies also help to improve page load times, since the amount of information in a session cookie is small and requires little bandwidth.</p>
+
+				<p><strong>Personalization cookies.</strong> Cookies can be used to remember information about the user in order to show relevant content to that user over time. For example, a web server might send a cookie containing the username that was last used to log into a website, so that it may be filled in automatically the next time the user logs in.</p>
+
+				<p>Many websites use cookies for personalization based on the user's preferences. Users select their preferences by entering them in a web form and submitting the form to the server. The server encodes the preferences in a cookie and sends the cookie back to the browser. This way, every time the user accesses a page on the website, the server can personalize the page according to the user's preferences.</p>
+
+				<p><strong>Tracking cookies</strong>, and especially third-party tracking cookies, are commonly used as ways to compile long-term records of individuals' browsing histories.</p>
+
+				<p>Tracking cookies are used to track users' web browsing habits. This can also be done to some extent by using the IP address of the computer requesting the page or the referer field of the HTTP request header, but cookies allow for greater precision. This can be demonstrated as follows:</p>
+
+				<ul>
+					<li>
+						If the user requests a page of the site, but the request contains no cookie, the server presumes that this is the first page visited by the user. So the server creates a unique identifier (typically a string of random letters and numbers) and sends it as a cookie back to the browser together with the requested page.
+					</li>
+					<li>
+						From this point on, the cookie will automatically be sent by the browser to the server every time a new page from the site is requested. The server not only sends the page as usual but also stores the URL of the requested page, the date/time of the request, and the cookie in a log file.
+					</li>
+				</ul>
+
+				<p>By analyzing this log file, it is then possible to find out which pages the user has visited, in what sequence, and for how long.</p>
+
+				<h2 class="mb-4 text-center">Managing cookies</h2>
+
+				<p>Most browsers allow you to manage how cookies are set and used as you're browsing, and to clear cookies and browsing data. Also, your browser may have settings allowing you to manage cookies on a site-by-site basis.</p>
+
+				<p>For example, Google Chrome (and other Chrome-based browsers) and Mozilla Firefox settings allow you to delete existing cookies, allow or block all cookies, and set cookie preferences for websites.</p>
+				
+				<p>Most of the modern browsers have the <strong>Incognito mode</strong>, which doesn’t store your browser history of visited sites or cookies on your device after you close all "Incognito" windows.</p>
+
+			</div>
+
+		</div>
+
+	</main>
+
+	<footer class="mt-auto bg-light py-2">
+		<div class="container">
+			<p class="my-2 text-center text-muted">
+				&copy; <script>document.write(new Date().getFullYear())</script><noscript>2022</noscript>
+				<a href="./" class="text-muted d-block d-md-inline">Cookie Notice</a>
+				<span class="mx-2 d-none d-md-inline-block">|</span>
+				<a href="../" class="text-muted d-block d-md-inline" target="_blank">Get Your Cookie Notice</a>
+			</p>
+		</div>
+	</footer>
+
+	<div id="cookie-notice">
+	  We use cookies to deliver better experience.
+	  <a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer">More info</a>
+	  <a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()">OK</a>
+	</div>
+
+	<script>
+	function closeCookieNotice() {
+		const nowDate = new Date();
+		const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();
+		document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";
+		document.getElementById("cookie-notice").style.display = "none";
+	};
+	document.addEventListener("DOMContentLoaded", function() {
+		const cookie_notice = ('; ' + document.cookie).split('; cookie_notice=').pop().split(';')[0];
+		if (cookie_notice !== "0") {
+			document.getElementById("cookie-notice").style.display = "block";
+		}
+	});
+	</script>
+
+</body>
+</html>

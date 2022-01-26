@@ -1,0 +1,116 @@
+/*** Cookie Notice @ https://cookienotice.github.io ***/
+
+body {
+	background: #fff url('../img/bg.png');
+	font-family: 'Outfit', sans-serif;
+	color: #222;
+}
+
+code,
+pre,
+.text-monospace {
+	font-family: 'Roboto Mono', monospace;
+}
+
+pre {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	max-height: 360px;
+	scrollbar-width: thin;
+	border-radius: 0.25rem;
+	background-color: #f7f7f7;
+	tab-size: 25px;
+}
+
+code {
+	padding: 0.125rem 0.25rem;
+	border: 1px solid #eee;
+	border-radius: 0.25rem;
+	background-color: #f9f9f9;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+@media only screen and (min-width: 768px) {
+	h1 {
+		font-size: 4rem;
+	}
+}
+
+.title-gradient {
+	background: #ce8625;
+	background: -moz-linear-gradient(45deg, #ce8625 0%, #f7cf9b 100%);
+	background: -webkit-linear-gradient(45deg, #ce8625 0%,#f7cf9b 100%);
+	background: linear-gradient(45deg, #ce8625 0%,#f7cf9b 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #ce8625;
+}
+
+.code-block .btn-copy {
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+}
+
+.or-sep::before,
+.or-sep::after {
+	display: inline-block;
+	content: '';
+	border-top: 1px solid #ccc;
+	width: 7rem;
+	margin: 0 1.5rem;
+	transform: translateY(-0.5rem);
+}
+
+/* Browser Demo */
+
+.browser-container {
+	border: 3px solid #f1f1f1;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
+}
+
+.browser-top {
+	padding: 10px;
+	background: #f1f1f1;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	text-align: right;
+}
+
+.browser-title h5 {
+	margin-bottom: 0;
+}
+
+.browser-dot {
+	height: 12px;
+	width: 12px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.browser-content {
+	padding: 10px;
+	background-color: #fff;
+}
+
+/* Footer */
+
+.footer-links span {
+	color: #bbb !important;
+}
+
+/* Utilities */
+
+.autoselect {  
+	-webkit-user-select: all;
+	-moz-user-select: all;
+	-ms-user-select: all;
+	user-select: all;
+}

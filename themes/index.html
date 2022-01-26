@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Simple and easy to install Cookie Notice bar with lots of themes and fully mobile responsive.">
+	<meta name="tags" content="cookie, notice, cookie bar, eu cookies, themes, cookies, cookie accept, cookie notification">
+	<title>Cookie Notice Themes</title>
+	<link rel="shortcut icon" href="../assets/img/favicon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono&display=swap" as="style">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../assets/css/styles.css" />
+	<style>
+	h1 > a > svg {
+		width: 36px;
+		height: 36px;
+	}
+	#cookie-notice {
+		display: none;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		max-width: 450px;
+		margin: auto;
+		padding: 0.5rem;
+		border: 1px solid #eee;
+		background-color: #fefefe;
+		box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.05);
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 22px;
+		font-size: 15px;
+		text-align: center;
+		color: #555;
+	}
+	.cookie-notice-more {
+		margin: 0 0.25rem;
+		text-decoration-style: dashed;
+		color: inherit;
+	}
+	.cookie-notice-close {
+		padding: 0 0.5rem;
+		border: 1px solid #ddd;
+		border-radius: 0.125rem;
+		line-height: 20px;
+		text-decoration: none;
+		color: #888;
+	}
+	@media only screen and (min-width: 768px) {
+		h1 > a > svg {
+			width: 60px;
+			height: 60px;
+		}
+		#cookie-notice {
+	  		bottom: 1rem;
+	  		border-radius: 0.25rem;
+		}
+		.cookie-notice-close {
+			float: right;
+		}
+	}
+	</style>
+</head>
+<body>
+	<main class="container">
+
+		<div class="px-4 py-5">
+
+			<h1 class="title-gradient text-center">
+				<a href="../" class="text-decoration-none">
+					<svg viewBox="0 0 72 72" class="me-1" style="margin-top:-15px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="11.0013" x2="54.0072" y1="61.0005" y2="17.9946"><stop offset="0" stop-color="#fff"/><stop offset="0" stop-color="#ce8625"/><stop offset="1" stop-color="#f7cf9b"/></linearGradient><path d="m71.8 36c-9.8-.1-17.8-8.1-17.8-18-9.9 0-17.9-7.9-18-17.8-3.8-.6-7.8 0-11.2 1.8l-9.7 5c-3.5 1.8-6.3 4.6-8.1 8.1l-5 9.7c-1.8 3.5-2.4 7.5-1.8 11.4l1.7 10.7c.6 3.9 2.4 7.5 5.2 10.3l7.7 7.7c2.8 2.8 6.4 4.6 10.2 5.2l10.8 1.7c3.9.6 7.8 0 11.3-1.8l9.7-5c3.5-1.8 6.3-4.6 8.1-8.1l4.9-9.7c1.9-3.5 2.6-7.4 2-11.2zm-47 15.8c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2.1 4.5-4.5 4.5zm4.5-22.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2.1 4.5-4.5 4.5zm22.5 18c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2.1 4.5-4.5 4.5z" fill="url(#a)"/></svg>
+					Cookie Notice
+				</a>
+			</h1>
+
+			<h2 class="mt-4 mb-5 text-center text-info">Theme Collection</h2>
+
+			<!-- ADV #1 -->
+
+			<div class="col-lg-6 mx-auto">
+
+				<!-- Default Dark Theme -->
+				<div class="browser-container mb-5" id="theme-default-dark">
+					<div class="browser-top d-flex justify-content-between">
+						<div class="browser-title">
+							<h5>Default Dark</h5>
+						</div>
+						<div class="browser-dots">
+							<span class="browser-dot"></span>
+							<span class="browser-dot"></span>
+							<span class="browser-dot"></span>
+						</div>
+					</div>
+					<div class="browser-content">
+						<p class="lead text-muted d-flex justify-content-between">
+							<a href="./default-dark" class="text-secondary" title="View theme live preview (New tab)" target="_blank">Theme Preview</a>
+							<a href="#" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#theme-setup-default-dark">View Setup</a>
+						</p>
+						<p class="text-muted">Dark version for the default Cookie Notice theme</p>
+						<p class="my-4 text-center">
+							<img src="./default-dark/default-dark-theme-preview.png" width="75%" alt="Preview image of Default Dark theme">
+						</p>
+					</div>
+					<div class="modal fade" id="theme-setup-default-dark" tabindex="-1">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Default Dark - Theme Setup</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<ul>
+										<li>
+											<a href="../">Include default</a> <code>&lt;div&gt;</code> and <code>&lt;script&gt;</code>
+										</li>
+										<li>
+											<a href="https://cookienotice.github.io/themes/default-dark/cookienotice.min.css" download="cookienotice.min.css" target="_blank">Download theme</a> CSS file
+										</li>
+										<li>
+											Upload theme <code>.css</code> file to your website
+										</li>
+										<li>
+											Include the <strong>CSS</strong> in your document <code>&lt;head&gt;</code> section
+										</li>
+									</ul>
+									<p>Local self-hosted setup example:</p>
+									<p>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;/install_path/css/cookienotice.min.css&quot; /&gt;</pre>
+									</p>
+									<h5 class="or-sep my-4 text-center">OR</h5>
+									<p>Include the <abbr title="Hosted on our website">hosted</abbr> version in your <code>&lt;head&gt;</code> section:</p>
+									<p>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.github.io/themes/default-dark/cookienotice.min.css&quot; /&gt;</pre>
+									</p>
+									<p class="mt-5 text-center">
+										<a href="./default-dark" class="btn btn-outline-primary" target="_blank">Theme Live Preview</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				 </div>
+
+				<!-- Soft Dark Theme -->
+				<div class="browser-container" id="theme-soft-dark">
+					<div class="browser-top d-flex justify-content-between">
+						<div class="browser-title">
+							<h5>Soft Dark</h5>
+						</div>
+						<div class="browser-dots">
+							<span class="browser-dot"></span>
+							<span class="browser-dot"></span>
+							<span class="browser-dot"></span>
+						</div>
+					</div>
+					<div class="browser-content">
+						<p class="lead text-muted d-flex justify-content-between">
+							<a href="./soft-dark" class="text-secondary" title="View theme live preview (New tab)" target="_blank">Theme Preview</a>
+							<a href="#" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#theme-setup-soft-dark">View Setup</a>
+						</p>
+						<p class="text-muted">Soft Dark theme for Cookie Notice</p>
+						<p class="my-2">
+							<img src="./soft-dark/soft-dark-theme-preview.png" width="50%" alt="Preview image of Default Dark theme">
+						</p>
+					</div>
+					<div class="modal fade" id="theme-setup-soft-dark" tabindex="-1">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Soft Dark - Theme Setup</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<ul>
+										<li>
+											<a href="../">Include default</a> <code>&lt;script&gt;</code>
+										</li>
+										<li>
+											<a href="https://cookienotice.github.io/themes/default-dark/cookienotice.min.css" download="cookienotice.min.css" target="_blank">Download theme</a> CSS file
+										</li>
+										<li>
+											Upload theme <code>.css</code> file to your website
+										</li>
+										<li>
+											Include the <strong>CSS</strong> in your document <code>&lt;head&gt;</code> section
+										</li>
+									</ul>
+									<p>Local self-hosted setup example:</p>
+									<p>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;/install_path/css/cookienotice.min.css&quot; /&gt;</pre>
+									</p>
+									<h5 class="or-sep my-4 text-center">OR</h5>
+									<p>Include the <abbr title="Hosted on our website">hosted</abbr> version in your <code>&lt;head&gt;</code> section:</p>
+									<p>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.github.io/themes/soft-dark/cookienotice.min.css&quot; /&gt;</pre>
+									</p>
+									<p>Add the Cookie Notice <code>&lt;div&gt;</code> block into your <code>&lt;body&gt;</code>:</p>
+									<div class="code-block position-relative">
+										<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#code-theme-soft-dark" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
+										<pre class="autoselect" id="code-theme-soft-dark">&lt;div id=&quot;cookie-notice&quot;&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href=&quot;https://cookienotice.github.io/about-cookies&quot; class=&quot;cookie-notice-more&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;More info...&lt;/a&gt;<br>&#9;&lt;a href=&quot;javascript:void(0)&quot; class=&quot;cookie-notice-close&quot; onclick=&quot;closeCookieNotice()&quot;>&times;&lt;/a&gt;<br>&lt;/div&gt;</pre>
+									</div>
+									<p class="mt-5 text-center">
+										<a href="./soft-dark" class="btn btn-outline-primary" target="_blank">Theme Live Preview</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				 </div>
+
+				 <h3 class="mt-5 mb-3 text-center text-info">More themes are coming soon!</h3>
+
+			</div>
+
+			<div class="col-lg-6 mt-5 mx-auto py-2">
+				<hr>
+			</div>
+
+			<h3 class="mt-4 mb-2 text-center">Setup Cookie Notice</h3>
+
+			<p class="text-center text-muted">Setup your <strong>cookie notice</strong> first before using themes.</p>
+
+			<p class="text-center">
+				<a href="../" class="btn btn-outline-primary px-4">View Setup</a>
+			</p>
+
+		</div>
+
+	</main>
+
+	<section class="container mb-5">
+		<div class="mt-2 mb-4 text-center">
+			<a href="https://freetools.dev/?ref=cookienotice" title="Sponsored" target="_blank" rel="noreferrer noopener">
+				<img src="https://static.freetools.dev/img/ads/468x60/freetools-banner-460x60-01.png" class="img-fluid" width="468" width="60">
+			</a>
+		</div>
+	</section>
+
+	<footer class="bg-light py-2">
+		<div class="container">
+			<p class="my-2 text-center text-muted">
+				&copy; <script>document.write(new Date().getFullYear())</script><noscript>2022</noscript>
+				<a href="../about-cookies" class="text-muted" target="_blank">Cookie Notice</a>
+				<span class="mx-2">|</span>
+				<a href="#license" class="text-muted" data-bs-toggle="modal" data-bs-target="#license">MIT License</a>
+				<span class="mx-2">|</span>
+				<a href="../download" class="text-muted" >Download</a>
+				<span class="mx-2">|</span>
+				<a href="https://freetools.dev" class="text-muted" title="Try Free Tools For Web Developers" target="_blank">Free Web Tools</a>
+				<span class="mx-2">|</span>
+				<a href="#contact-us" class="text-muted" data-bs-toggle="modal" data-bs-target="#contact-us">Contact us</a>
+			</p>
+		</div>
+	</footer>
+
+	<!-- Modal License -->
+	<div class="modal fade" id="license" tabindex="-1" aria-labelledby="licenseModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="licenseModalLabel">Cookie Notice License</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p class="display-6">MIT License</p>
+				<p>Copyright (c) 2022 cookienotice.github.io</p>
+				<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+				<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+				<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<!-- Modal Contact us -->
+	<div class="modal fade" id="contact-us" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="contactModalLabel">Contact us</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="https://submit-form.com/awXb2epO" method="post">
+					<div class="mb-3">
+						<label for="contact-name-input" class="form-label">Your Name</label>
+						<input type="email" class="form-control" id="contact-name-input" name="name" placeholder="Your Name" required>
+					 </div>
+					<div class="mb-3">
+						<label for="contact-email-input" class="form-label">Your Email</label>
+						<input type="email" class="form-control" id="contact-email-input" name="email" placeholder="your@email.com" required>
+					 </div>
+					 <div class="mb-3">
+						<label for="contact-message-input" class="form-label">Your Message</label>
+						<textarea class="form-control" id="contact-message-input" name="message" rows="3" placeholder="Type your message here..." required></textarea>
+					 </div>
+					 <div class="d-flex justify-content-between mt-4 mb-2">
+						<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-success d-block">Send Message</button>
+					 </div>
+				</form>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<div id="cookie-notice">
+	  We use cookies to deliver better experience.
+	  <a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer">More info...</a>
+	  <a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()">OK</a>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js" integrity="sha512-sIqUEnRn31BgngPmHt2JenzleDDsXwYO+iyvQ46Mw6RL+udAUZj2n/u/PGY80NxRxynO7R9xIGx5LEzw4INWJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="../assets/js/scripts.js"></script>
+
+	<script>
+	function closeCookieNotice() {
+		const nowDate = new Date();
+		const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();
+		document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";
+		document.getElementById("cookie-notice").style.display = "none";
+	};
+	document.addEventListener("DOMContentLoaded", function() {
+		const cookie_notice = ('; ' + document.cookie).split('; cookie_notice=').pop().split(';')[0];
+		if (cookie_notice !== "0") {
+			document.getElementById("cookie-notice").style.display = "block";
+		}
+	});
+	</script>
+
+</body>
+</html>

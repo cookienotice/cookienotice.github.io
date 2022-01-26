@@ -1,0 +1,54 @@
+/** Cookie Notice v1.0 @ https://cookienotice.github.io **/
+
+#cookie-notice {
+	display: none;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	max-width: calc(100% - 1rem);
+	margin: auto;
+	padding: 0.75rem 1rem;
+	border: none;
+	background-color: #444;
+	box-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.15);
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	font-size: 15px;
+	text-align: center;
+	color: #f1f1f1;
+}
+
+.cookie-notice-more {
+	margin: 0 0.25rem;
+	text-decoration-style: dashed;
+	color: inherit;
+}
+
+.cookie-notice-close {
+	position: absolute;
+	top: 0.25rem;
+	right: 0;
+	padding: 0 0.5rem;
+	border: none;
+	font-size: 32px;
+	line-height: 32px;
+	font-family: monospace;
+	text-decoration: none;
+	color: #eee;
+}
+
+@media only screen and (min-width: 768px) {
+	#cookie-notice {
+		right: unset;
+		left: 1.5rem;
+		max-width: 260px;
+		bottom: 1.5rem;
+		border-radius: 0.75rem;
+		text-align: left;
+	}
+	.cookie-notice-close {
+		float: right;
+	}
+}

@@ -1,13 +1,365 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Cookie Notice</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Simple and easy to install Cookie Notice bar with lots of themes and fully mobile responsive.">
+	<meta name="tags" content="cookie, notice, cookie bar, eu cookies, law, cookies, cookie accept, cookie notification">
+	<title>Simple Cookie Notice For Website | Lightweight solution, easy to install</title>
+	<link rel="shortcut icon" href="./assets/img/favicon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono&display=swap" as="style">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="./assets/css/styles.css" />
+	<style>
+	#cookie-notice {
+		display: none;
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 999;
+		max-width: 450px;
+		margin: auto;
+		padding: 0.5rem;
+		border: 1px solid #eee;
+		background-color: #fefefe;
+		box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.05);
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 22px;
+		font-size: 15px;
+		text-align: center;
+		color: #555;
+	}
+	.cookie-notice-more {
+		margin: 0 0.25rem;
+		text-decoration-style: dashed;
+		color: inherit;
+	}
+	.cookie-notice-close {
+		padding: 0 0.5rem;
+		border: 1px solid #ddd;
+		border-radius: 0.125rem;
+		line-height: 20px;
+		text-decoration: none;
+		color: #888;
+	}
+	@media only screen and (min-width: 768px) {
+		#cookie-notice {
+	  		bottom: 1rem;
+	  		border-radius: 0.25rem;
+		}
+		.cookie-notice-close {
+			float: right;
+		}
+	}
+	</style>
 </head>
 <body>
-  <center>
-     <h1>Coming Soon</h1>
-  </center>
+	<main class="container">
+
+		<div class="px-4 py-5">
+
+			<svg viewBox="0 0 72 72" width="96" height="96" class="d-block mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="11.0013" x2="54.0072" y1="61.0005" y2="17.9946"><stop offset="0" stop-color="#fff"/><stop offset="0" stop-color="#ce8625"/><stop offset="1" stop-color="#f7cf9b"/></linearGradient><path d="m71.8 36c-9.8-.1-17.8-8.1-17.8-18-9.9 0-17.9-7.9-18-17.8-3.8-.6-7.8 0-11.2 1.8l-9.7 5c-3.5 1.8-6.3 4.6-8.1 8.1l-5 9.7c-1.8 3.5-2.4 7.5-1.8 11.4l1.7 10.7c.6 3.9 2.4 7.5 5.2 10.3l7.7 7.7c2.8 2.8 6.4 4.6 10.2 5.2l10.8 1.7c3.9.6 7.8 0 11.3-1.8l9.7-5c3.5-1.8 6.3-4.6 8.1-8.1l4.9-9.7c1.9-3.5 2.6-7.4 2-11.2zm-47 15.8c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2.1 4.5-4.5 4.5zm4.5-22.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2.1 4.5-4.5 4.5zm22.5 18c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2.1 4.5-4.5 4.5z" fill="url(#a)"/></svg>
+
+			<h1 class="title-gradient text-center"><a href="./" class="text-decoration-none">Cookie Notice</a></h1>
+
+			<div class="col-lg-6 mx-auto">
+
+				<p class="lead mb-4 text-center">A simple way to show the <span class="fw-bold">cookie notice</span> on your website without overloading it. Lightweight (<abbr title="When delivered as GZIP compressed">~1kb</abbr>), quick setup and <a href="./themes" title="View Cookie Notice themes">themes</a>.</p>
+
+				<!-- ADV #1 -->
+
+				<h2 class="mb-4 text-center">Setup</h2>
+
+				<ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="setup-internal-tab" data-bs-toggle="tab" data-bs-target="#setup-internal-content" type="button" role="setup-internal-content" aria-controls="home" aria-selected="true">Internal</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="setup-external-tab" data-bs-toggle="tab" data-bs-target="#setup-external-content" type="button" role="tab" aria-controls="setup-external-content" aria-selected="false">External</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="setup-bundle-tab" data-bs-toggle="tab" data-bs-target="#setup-bundle-content" type="button" role="tab" aria-controls="setup-bundle-content" aria-selected="false">Bundle <sup><span class="badge rounded-pill bg-light text-dark">Quick</span></sup></button>
+					</li>
+				</ul>
+
+				<div class="tab-content" id="setupTabContent">
+					<div class="tab-pane fade show active" id="setup-internal-content" role="tabpanel" aria-labelledby="setup-internal-content-tab">
+						<h3 class="mt-4 mb-3 text-center">Internal installation <sup><small>(<a href="#why-internal" title="Why internal is recommended?" data-bs-toggle="modal" data-bs-target="#why-internal">why?</a>)</small></sup></h3>
+						<p class="text-center"><strong>Styles:</strong> Add the following code to your HTML <code>&lt;head&gt;&lt;/head&gt;</code> section.</p>
+						<div class="code-block position-relative mb-4">
+							<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#code-style-head" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
+							<pre class="autoselect" id="code-style-head">&lt;style&gt;<br>#cookie-notice {<br>&#9;display: none;<br>&#9;position: fixed;<br>&#9;right: 0;<br>&#9;bottom: 0;<br>&#9;left: 0;<br>&#9;z-index: 999;<br>&#9;max-width: 450px;<br>&#9;margin: auto;<br>&#9;padding: 0.5rem;<br>&#9;border: 1px solid #eee;<br>&#9;background-color: #fefefe;<br>&#9;box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.05);<br>&#9;font-family: Arial, Helvetica, sans-serif;<br>&#9;line-height: 22px;<br>&#9;font-size: 15px;<br>&#9;text-align: center;<br>&#9;color: #555;<br>}<br>.cookie-notice-more {<br>&#9;margin: 0 0.25rem;<br>&#9;text-decoration-style: dashed;<br>&#9;color: inherit;<br>}<br>.cookie-notice-close {<br>&#9;padding: 0 0.5rem;<br>&#9;border: 1px solid #ddd;<br>&#9;border-radius: 0.125rem;<br>&#9;line-height: 20px;<br>&#9;text-decoration: none;<br>&#9;color: #888;<br>}<br>@media only screen and (min-width: 768px) {<br>&#9;#cookie-notice {<br>&#9;&#9;bottom: 1rem;<br>&#9;&#9;border-radius: 0.25rem;<br>&#9;}<br>&#9;.cookie-notice-close {<br>&#9;&#9;float: right;<br>&#9;}<br>}<br>&lt;/style&gt;</pre>
+						</div>
+						<p class="text-center"><strong>Notice block:</strong> Add the following code to your HTML <code>&lt;body&gt;&lt;/body&gt;</code> section.</p>
+						<div class="code-block position-relative mb-4">
+							<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#code-notice-body" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
+							<pre class="autoselect" id="code-notice-body">&lt;div id="cookie-notice"&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer"&gt;More info...&lt;/a&gt;<br>&#9;&lt;a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()"&gt;OK&lt;/a&gt;<br>&lt;/div&gt;</pre>
+						</div>
+						<p class="text-center"><strong>Script:</strong> Add the following code to your HTML footer before the <code>&lt;/body&gt;</code> closing tag.</p>
+						<div class="code-block position-relative mb-4">
+							<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#code-script-body" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
+							<pre class="autoselect" id="code-script-body">&lt;script&gt;<br>function closeCookieNotice() {<br>&#9;const nowDate = new Date();<br>&#9;const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();<br>&#9;document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";<br>&#9;document.getElementById("cookie-notice").style.display = "none";<br>};<br>document.addEventListener("DOMContentLoaded", function() {<br>&#9;const cookie_notice = ('; ' + document.cookie).split('; cookie_notice=').pop().split(';')[0];<br>&#9;if (cookie_notice !== "0") {<br>&#9;&#9;document.getElementById("cookie-notice").style.display = "block";<br>&#9;}<br>});<br>&lt;/script&gt;</pre>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="setup-external-content" role="tabpanel" aria-labelledby="setup-external-content-tab">
+						<h3 class="mt-4 mb-3 text-center">External installation</h3>
+						<p class="text-center">
+							<a href="./download" class="btn btn-outline-success" title="Download Cookie Notice package">Download Cookie Notice</a>
+						</p>
+						<p class="text-center"><strong>CSS:</strong> Add the following code to your HTML <code>&lt;head&gt;&lt;/head&gt;</code> section.</p>
+						<div class="code-block position-relative">
+							<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;/install_path/css/cookienotice.min.css&quot;&gt;</pre>
+						</div>
+						<p class="or-sep text-center">OR</p>
+						<div class="code-block position-relative">
+							<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.github.io/cookienotice.min.css&quot;&gt;</pre>
+						</div>
+						<p class="text-center"><strong>HTML:</strong> Add the following code to your HTML <code>&lt;body&gt;&lt;/body&gt;</code> section.</p>
+						<div class="code-block position-relative">
+							<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#include-notice-body" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
+							<pre class="autoselect" id="include-notice-body">&lt;div id="cookie-notice"&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer"&gt;More info...&lt;/a&gt;<br>&#9;&lt;a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()"&gt;OK&lt;/a&gt;<br>&lt;/div&gt;</pre>
+						</div>
+						<p class="text-center"><strong>JS:</strong> Add the following code to your HTML footer before the <code>&lt;/body&gt;</code> closing tag.</p>
+						<div class="code-block position-relative">
+							<pre class="autoselect">&lt;script src=&quot;/install_path/js/cookienotice.min.js&quot;&gt;&lt;/script&gt;</pre>
+						</div>
+						<p class="or-sep text-center">OR</p>
+						<div class="code-block position-relative">
+							<pre class="autoselect">&lt;script src=&quot;https://cookienotice.github.io/cookienotice.min.js&quot;&gt;&lt;/script&gt;</pre>
+						</div>		
+					</div>
+
+					<div class="tab-pane fade" id="setup-bundle-content" role="tabpanel" aria-labelledby="setup-bundle-content-tab">
+						<h3 class="mt-4 mb-3 text-center">Bundle installation</h3>
+						<p class="text-center"><strong>Note:</strong> Use this type of installation if you like the English version text and look of the standard cookie notice theme (<a href="javascript:void(0)" onclick="showCookieNoticeDemo()">view it</a>). This requires to include only one JS file.</p>
+						<p class="text-center">
+							<a href="./download" class="btn btn-outline-success" title="Download Cookie Notice package">Download Cookie Notice</a>
+						</p>
+						<p class="text-center"><strong>Add JavaScript:</strong> Add the following code to your HTML <code>&lt;head&gt;&lt;/head&gt;</code> section or in your HTML footer before the <code>&lt;/body&gt;</code> closing tag.</p>
+						<div class="code-block position-relative">
+							<pre class="autoselect">&lt;script src=&quot;/install_path/js/cookienotice.bundle.min.js&quot;&gt;&lt;/script&gt;</pre>
+						</div>
+						<p class="or-sep text-center">OR</p>
+						<div class="code-block position-relative">
+							<pre class="autoselect">&lt;script src=&quot;https://cookienotice.github.io/cookienotice.bundle.min.js&quot;&gt;&lt;/script&gt;</pre>
+						</div>
+					</div>
+
+				</div>
+
+				<h3 class="mt-5 mb-2 text-center text-info">Explore Themes</h3>
+
+				<p class="text-center">You can customize your <strong>cookie notice</strong> look thanks to themes.</p>
+	
+				<p class="text-center">
+					<a href="./themes" class="btn btn-outline-info px-4">View Themes</a>
+				</p>
+
+				<hr class="my-5">
+
+				<h4 class="mb-4 text-center">Frequently Asked Questions</h4>
+
+				<div class="accordion accordion-flush" id="accordionFAQ">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="accordion-faq-heading-0">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-faq-collapse-0" aria-expanded="false" aria-controls="accordion-faq-collapse-0">
+								Am I required to show a cookie notice on my website?
+							</button>
+						</h2>
+						<div id="accordion-faq-collapse-0" class="accordion-collapse collapse" aria-labelledby="accordion-faq-heading-0" data-bs-parent="#accordionFAQ">
+							<div class="accordion-body">
+								If your website uses any kind of <a href="./about-cookies" title="Know more about HTTP cookies" target="_blank">http cookies</a> (tracking cookies like Google Analytics, to set preferrences, session cookies, etc.) and your serve/have/allow visitors from the European Union (most likely, yes), then according to the <em>GDPR EU Directive</em> you are obligated to clearly show (notice bar) that your website is using cookies.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="accordion-faq-heading-1">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-faq-collapse-1" aria-expanded="false" aria-controls="accordion-faq-collapse-1">
+								Is this cookie notice compatibile with all browsers?
+							</button>
+						</h2>
+						<div id="accordion-faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="accordion-faq-heading-1" data-bs-parent="#accordionFAQ">
+							<div class="accordion-body">
+								This <strong>Cookie Notice</strong> is compatibile with 99.9% of current mobile and desktop browsers with JavaScript enabled (by default it is enabled).
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="accordion-faq-heading-2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-faq-collapse-2" aria-expanded="false" aria-controls="accordion-faq-collapse-2">
+								Do I need access to my website files to setup it?
+							</button>
+						</h2>
+						<div id="accordion-faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="accordion-faq-heading-2" data-bs-parent="#accordionFAQ">
+							<div class="accordion-body">
+								Yes. You need to have an <abbr title="File Transfer Protocol">FTP</abbr> access to your website files in order to edit and insert the <strong>Cookie Notice</strong> code.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="accordion-faq-heading-3">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-faq-collapse-3" aria-expanded="false" aria-controls="accordion-faq-collapse-3">
+								Will the notice be shown to the EU users only?
+							</button>
+						</h2>
+						<div id="accordion-faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="accordion-faq-heading-3" data-bs-parent="#accordionFAQ">
+							<div class="accordion-body">
+								The <strong>Cookie Notice</strong> will be shown to <strong>all users</strong> regardless the country or region. This is a simple cookie notification bar solution. Showing the notice to <abbr title="European Union">EU</abbr> users only, require additional setup such as geo-location services and more code.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="accordion-faq-heading-4">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-faq-collapse-4" aria-expanded="false" aria-controls="accordion-faq-collapse-4">
+								Can I add this to a WordPress website?
+							</button>
+						</h2>
+						<div id="accordion-faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="accordion-faq-heading-4" data-bs-parent="#accordionFAQ">
+							<div class="accordion-body">
+								Yes. For that, you just need to edit your WordPress theme <code>header.php</code> and/or <code>footer.php</code> and insert the <strong>Cookie Notice</strong> code. By default those files are located in the <code>/wp-content/themes/your-current-theme/</code> directory.
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</main>
+
+	<section class="container mb-5">
+		<div class="mt-2 mb-4 text-center">
+			<a href="https://freetools.dev/?ref=cookienotice" title="Sponsored" target="_blank" rel="noreferrer noopener">
+				<img src="https://static.freetools.dev/img/ads/468x60/freetools-banner-460x60-01.png" class="img-fluid" width="468" width="60">
+			</a>
+		</div>
+	</section>
+
+	<footer class="bg-light py-2">
+		<div class="container">
+			<p class="footer-links my-2 text-center text-muted">
+				&copy; <script>document.write(new Date().getFullYear())</script><noscript>2022</noscript>
+				<a href="./about-cookies" class="text-muted" target="_blank">Cookie Notice</a>
+				<span class="mx-2">|</span>
+				<a href="#license" class="text-muted" data-bs-toggle="modal" data-bs-target="#license">MIT License</a>
+				<span class="mx-2">|</span>
+				<a href="./download" class="text-muted" >Download</a>
+				<span class="mx-2">|</span>
+				<a href="./themes" class="text-muted" >Themes</a>
+				<span class="mx-2">|</span>
+				<a href="https://freetools.dev" class="text-muted" title="Try Free Tools For Web Developers" target="_blank">Free Web Tools</a>
+				<span class="mx-2">|</span>
+				<a href="#contact-us" class="text-muted" data-bs-toggle="modal" data-bs-target="#contact-us">Contact us</a>
+			</p>
+		</div>
+	</footer>
+
+	<!-- Modal Why Internal -->
+	<div class="modal fade" id="why-internal" tabindex="-1" aria-labelledby="whyInPageModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="whyInPageModalLabel">Why <strong>internal</strong> installation is recommened?</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>Your website is most likely already loaded with lots of stylesheets (CSS) and scripts (JS) and the purpose of this <strong>Cookie Notice</strong> solution is to provide a tiny lightweight solution without impact on your website loading speed.</p>
+				<p>Each time a <code>*.CSS</code> or <code>*.JS</code> file is loading, the browser makes a new HTTP request and the more requests your web page has - the slower your website is loading.</p>
+				<p>So including the <strong>Cookie Notice</strong> code directly into your web page will avoid additional HTTP requests, so less impact on speed.</p>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<!-- Modal License -->
+	<div class="modal fade" id="license" tabindex="-1" aria-labelledby="licenseModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="licenseModalLabel">Cookie Notice License</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p class="display-6">MIT License</p>
+				<p>Copyright (c) 2022 cookienotice.github.io</p>
+				<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+				<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+				<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+			</div>
+			<div class="modal-footer d-flex justify-content-between">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<!-- Modal Contact us -->
+	<div class="modal fade" id="contact-us" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="contactModalLabel">Contact us</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="https://submit-form.com/awXb2epO" method="post">
+					<div class="mb-3">
+						<label for="contact-name-input" class="form-label">Your Name</label>
+						<input type="email" class="form-control" id="contact-name-input" name="name" placeholder="Your Name" required>
+					 </div>
+					<div class="mb-3">
+						<label for="contact-email-input" class="form-label">Your Email</label>
+						<input type="email" class="form-control" id="contact-email-input" name="email" placeholder="your@email.com" required>
+					 </div>
+					 <div class="mb-3">
+						<label for="contact-message-input" class="form-label">Your Message</label>
+						<textarea class="form-control" id="contact-message-input" name="message" rows="3" placeholder="Type your message here..." required></textarea>
+					 </div>
+					 <div class="d-flex justify-content-between mt-4 mb-2">
+						<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-success d-block">Send Message</button>
+					 </div>
+				</form>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<div id="cookie-notice">
+	  We use cookies to deliver better experience.
+	  <a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer">More info</a>
+	  <a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()">OK</a>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js" integrity="sha512-sIqUEnRn31BgngPmHt2JenzleDDsXwYO+iyvQ46Mw6RL+udAUZj2n/u/PGY80NxRxynO7R9xIGx5LEzw4INWJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="./assets/js/scripts.js"></script>
+
+	<script>
+	function closeCookieNotice() {
+		const nowDate = new Date();
+		const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();
+		document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";
+		document.getElementById("cookie-notice").style.display = "none";
+	};
+	document.addEventListener("DOMContentLoaded", function() {
+		const cookie_notice = ('; ' + document.cookie).split('; cookie_notice=').pop().split(';')[0];
+		if (cookie_notice !== "0") {
+			document.getElementById("cookie-notice").style.display = "block";
+		}
+	});
+	</script>
+
 </body>
 </html>
