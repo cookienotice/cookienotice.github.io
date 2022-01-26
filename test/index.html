@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cookie Notice Test</title>
+	<style>
+	body {
+		font-family: Arial, sans-serif;
+	}
+	h1 {
+		margin-bottom: 2.5rem;
+		font-size: 2.5rem;
+	}
+	#show-notice {
+		padding: 0.5rem 1rem;
+		border: 1px solid blue;
+		border-radius: 0.25rem;
+		text-decoration: none;
+		color: blue;
+	}
+	#show-notice:hover {
+		background-color: blue;
+		color: white;
+	}
+	</style>
+</head>
+<body>
+
+	<center style="padding:2rem">
+
+		<h1>Cookie Notice Test</h1>
+
+		<p>
+			<a href="javascript:void(0)" id="show-notice" onclick="showCookieNoticeDemo()">Show Cookie Notice</a>
+		</p>
+
+	</center>
+
+	<!-- Cookie Notice -->
+	<script src="../dist/js/cookienotice.bundle.js"></script>
+
+	<!-- Demo Functions -->
+	<script>
+	function showCookieNoticeDemo() {
+		var cookie_notice_id = document.getElementById("cookie-notice");
+		if (cookie_notice_id == null) {
+			document.body.innerHTML += cookie_notice_html;
+		}
+	}
+	</script>
+
+</body>
+</html>
