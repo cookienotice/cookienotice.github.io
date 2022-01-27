@@ -1,1 +1,1 @@
-# [cookienotice.github.io](https://cookienotice.github.io)
+# [cookienotice.js.org](https://cookienotice.js.org "Setup Your Cookie Notice")
