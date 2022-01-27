@@ -26,29 +26,22 @@
 	</style>
 </head>
 <body>
-
 	<center style="padding:2rem">
-
 		<h1>Cookie Notice Test</h1>
-
 		<p>
 			<a href="javascript:void(0)" id="show-notice" onclick="showCookieNoticeDemo()">Show Cookie Notice</a>
 		</p>
-
 	</center>
-
 	<!-- Cookie Notice -->
 	<script src="../dist/js/cookienotice.bundle.js"></script>
-
 	<!-- Demo Functions -->
 	<script>
 	function showCookieNoticeDemo() {
 		var cookie_notice_id = document.getElementById("cookie-notice");
 		if (cookie_notice_id == null) {
-			document.body.innerHTML += cookie_notice_html;
+			document.body.insertAdjacentHTML("beforeend", cookie_notice_html);
 		}
 	}
 	</script>
-
 </body>
 </html>

@@ -1,9 +1,12 @@
-# cookienotice.github.io
-[cookienotice.github.io](https://cookienotice.github.io)
+# [cookienotice.js.org](https://cookienotice.js.org "Get Your Cookie Notice")
 
-## Simple cookie notice bar with nice themes
+## Simple cookie notice bar with [nice themes](https://cookienotice.js.org/themes "View Cookie Notice themes")
 
-Website owners are enforced by law to show the cookie notice. Yes, nobody likes that notice but we have to show it. Why slow down your website by loading it with one more heavy JavaScript library? Use a lightweight solution - Cookie Notice was made for that!
+Website owners are enforced by law to show the cookie notice. Yes, nobody likes that notice but we have to show it.
+
+Why slow down your website by loading it with one more heavy JavaScript library?
+
+Use a lightweight solution - Cookie Notice was made for that!
 
 ## Setup / Installation
 
@@ -60,7 +63,7 @@ Add the HTML code block below before your ```</body>``` closing tag:
 ```
 <div id="cookie-notice">
 	We use cookies to deliver better experience.
-	<a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer">More info...</a>
+	<a href="https://cookienotice.js.org/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener">More info</a>
 	<a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()">OK</a>
 </div>
 ```
@@ -85,3 +88,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ### Including files in your HTML document
 Download the latest release and find the neccessary files located in the ```dist``` folder.
+
+#### Setup your **Cookie Notice** now 👉 [cookienotice.js.org](https://cookienotice.js.org)

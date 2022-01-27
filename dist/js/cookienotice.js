@@ -1,4 +1,4 @@
-/*! Cookie Notice v.1.0 @ https://cookienotice.github.io */
+/*! Cookie Notice v.1.0.1 @ https://cookienotice.js.org */
 
 function closeCookieNotice() {
 	const nowDate = new Date();
