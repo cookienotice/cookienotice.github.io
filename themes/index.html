@@ -101,7 +101,7 @@
 						</p>
 						<p class="text-muted">Dark version for the default Cookie Notice theme</p>
 						<p class="my-4 text-center">
-							<img src="./default-dark/default-dark-theme-preview.png" width="75%" alt="Preview image of Default Dark theme">
+							<img src="./default-dark/default-dark-theme-preview.png" width="60%" alt="Preview image of Default Dark theme">
 						</p>
 					</div>
 					<div class="modal fade" id="theme-setup-default-dark" tabindex="-1">
@@ -117,7 +117,7 @@
 											<a href="../">Include default</a> <code>&lt;div&gt;</code> and <code>&lt;script&gt;</code>
 										</li>
 										<li>
-											<a href="https://cookienotice.github.io/themes/default-dark/cookienotice.min.css" download="cookienotice.min.css" target="_blank">Download theme</a> CSS file
+											<a href="./default-dark/cookienotice.min.css" download="cookienotice.min.css" target="_blank">Download theme</a> CSS file
 										</li>
 										<li>
 											Upload theme <code>.css</code> file to your website
@@ -128,12 +128,12 @@
 									</ul>
 									<p>Local self-hosted setup example:</p>
 									<p>
-										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;/install_path/css/cookienotice.min.css&quot; /&gt;</pre>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/css/themes/default-dark/cookienotice.min.css&quot; /&gt;</pre>
 									</p>
 									<h5 class="or-sep my-4 text-center">OR</h5>
 									<p>Include the <abbr title="Hosted on our website">hosted</abbr> version in your <code>&lt;head&gt;</code> section:</p>
 									<p>
-										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.github.io/themes/default-dark/cookienotice.min.css&quot; /&gt;</pre>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.js.org/themes/default-dark/cookienotice.min.css&quot; /&gt;</pre>
 									</p>
 									<p class="mt-5 text-center">
 										<a href="./default-dark" class="btn btn-outline-primary" target="_blank">Theme Live Preview</a>
@@ -145,7 +145,7 @@
 				 </div>
 
 				<!-- Soft Dark Theme -->
-				<div class="browser-container" id="theme-soft-dark">
+				<div class="browser-container mb-5" id="theme-soft-dark">
 					<div class="browser-top d-flex justify-content-between">
 						<div class="browser-title">
 							<h5>Soft Dark</h5>
@@ -163,7 +163,7 @@
 						</p>
 						<p class="text-muted">Soft Dark theme for Cookie Notice</p>
 						<p class="my-2">
-							<img src="./soft-dark/soft-dark-theme-preview.png" width="50%" alt="Preview image of Default Dark theme">
+							<img src="./soft-dark/soft-dark-theme-preview.png" width="40%" alt="Preview image of Default Dark theme">
 						</p>
 					</div>
 					<div class="modal fade" id="theme-setup-soft-dark" tabindex="-1">
@@ -179,7 +179,7 @@
 											<a href="../">Include default</a> <code>&lt;script&gt;</code>
 										</li>
 										<li>
-											<a href="https://cookienotice.github.io/themes/default-dark/cookienotice.min.css" download="cookienotice.min.css" target="_blank">Download theme</a> CSS file
+											<a href="./default-dark/cookienotice.min.css" download="cookienotice.min.css" target="_blank">Download theme</a> CSS file
 										</li>
 										<li>
 											Upload theme <code>.css</code> file to your website
@@ -190,20 +190,87 @@
 									</ul>
 									<p>Local self-hosted setup example:</p>
 									<p>
-										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;/install_path/css/cookienotice.min.css&quot; /&gt;</pre>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/css/themes/soft-dark/cookienotice.min.css&quot; /&gt;</pre>
 									</p>
 									<h5 class="or-sep my-4 text-center">OR</h5>
 									<p>Include the <abbr title="Hosted on our website">hosted</abbr> version in your <code>&lt;head&gt;</code> section:</p>
 									<p>
-										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.github.io/themes/soft-dark/cookienotice.min.css&quot; /&gt;</pre>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.js.org/themes/soft-dark/cookienotice.min.css&quot; /&gt;</pre>
 									</p>
 									<p>Add the Cookie Notice <code>&lt;div&gt;</code> block into your <code>&lt;body&gt;</code>:</p>
 									<div class="code-block position-relative">
-										<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#code-theme-soft-dark" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
-										<pre class="autoselect" id="code-theme-soft-dark">&lt;div id=&quot;cookie-notice&quot;&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href=&quot;https://cookienotice.github.io/about-cookies&quot; class=&quot;cookie-notice-more&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;More info...&lt;/a&gt;<br>&#9;&lt;a href=&quot;javascript:void(0)&quot; class=&quot;cookie-notice-close&quot; onclick=&quot;closeCookieNotice()&quot;>&times;&lt;/a&gt;<br>&lt;/div&gt;</pre>
+										<button class="btn btn-sm btn-outline-secondary btn-copy" id="#copy-theme-soft-dark" data-clipboard-target="#code-theme-soft-dark" data-bs-toggle="tooltip" title="Copy to clipboard" onclick="showCopiedText(this.id)">Copy</button>
+										<pre class="autoselect" id="code-theme-soft-dark">&lt;div id=&quot;cookie-notice&quot;&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href=&quot;https://cookienotice.js.org/about-cookies&quot; class=&quot;cookie-notice-more&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;More info&lt;/a&gt;<br>&#9;&lt;a href=&quot;javascript:void(0)&quot; class=&quot;cookie-notice-close&quot; onclick=&quot;closeCookieNotice()&quot;>&times;&lt;/a&gt;<br>&lt;/div&gt;</pre>
 									</div>
 									<p class="mt-5 text-center">
 										<a href="./soft-dark" class="btn btn-outline-primary" target="_blank">Theme Live Preview</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				 </div>
+
+				<!-- Flat Light Theme -->
+				<div class="browser-container mb-5" id="theme-default-dark">
+					<div class="browser-top d-flex justify-content-between">
+						<div class="browser-title">
+							<h5>Flat Light</h5>
+						</div>
+						<div class="browser-dots">
+							<span class="browser-dot"></span>
+							<span class="browser-dot"></span>
+							<span class="browser-dot"></span>
+						</div>
+					</div>
+					<div class="browser-content">
+						<p class="lead text-muted d-flex justify-content-between">
+							<a href="./flat-light" class="text-secondary" title="View theme live preview (New tab)" target="_blank">Theme Preview</a>
+							<a href="#" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#theme-setup-flat-light">View Setup</a>
+						</p>
+						<p class="text-muted">Dark version for the default Cookie Notice theme</p>
+						<p class="mt-4 mb-0 text-center">
+							<img src="./flat-light/flat-light-theme-preview.png" width="100%" alt="Preview image of Flat Light theme">
+						</p>
+					</div>
+					<div class="modal fade" id="theme-setup-flat-light" tabindex="-1">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">Flat Light - Theme Setup</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<ul>
+										<li>
+											<a href="../">Include default</a> <code>&lt;script&gt;</code>
+										</li>
+										<li>
+											<a href="./flat-light/cookienotice.min.css" download="cookienotice.min.css" target="_blank">Download theme</a> CSS file
+										</li>
+										<li>
+											Upload theme <code>.css</code> file to your website
+										</li>
+										<li>
+											Include the <strong>CSS</strong> in your document <code>&lt;head&gt;</code> section
+										</li>
+									</ul>
+									<p>Local self-hosted setup example:</p>
+									<p>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/css/themes/flat-light/cookienotice.min.css&quot; /&gt;</pre>
+									</p>
+									<h5 class="or-sep my-4 text-center">OR</h5>
+									<p>Include the <abbr title="Hosted on our website">hosted</abbr> version in your <code>&lt;head&gt;</code> section:</p>
+									<p>
+										<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.js.org/themes/flat-light/cookienotice.min.css&quot; /&gt;</pre>
+									</p>
+									<p>Add the Cookie Notice <code>&lt;div&gt;</code> block into your <code>&lt;body&gt;</code>:</p>
+									<div class="code-block position-relative">
+										<button class="btn btn-sm btn-outline-secondary btn-copy" id="#copy-theme-flat-light" data-clipboard-target="#code-theme-flat-light" data-bs-toggle="tooltip" title="Copy to clipboard" onclick="showCopiedText(this.id)">Copy</button>
+										<pre class="autoselect" id="code-theme-flat-light">&lt;div id=&quot;cookie-notice&quot;&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href=&quot;https://cookienotice.js.org/about-cookies&quot; class=&quot;cookie-notice-more&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;More info&lt;/a&gt;<br>&#9;&lt;a href=&quot;javascript:void(0)&quot; class=&quot;cookie-notice-close&quot; onclick=&quot;closeCookieNotice()&quot;>Got it&lt;/a&gt;<br>&lt;/div&gt;</pre>
+									</div>
+									<p class="mt-5 text-center">
+										<a href="./flat-light" class="btn btn-outline-primary" target="_blank">Theme Live Preview</a>
 									</p>
 								</div>
 							</div>
@@ -249,7 +316,7 @@
 				<span class="mx-2">|</span>
 				<a href="../download" class="text-muted" >Download</a>
 				<span class="mx-2">|</span>
-				<a href="https://freetools.dev" class="text-muted" title="Try Free Tools For Web Developers" target="_blank">Free Web Tools</a>
+				<a href="https://freetools.dev/?ref=cookienotice.js.org" class="text-muted" title="Try Free Tools For Web Developers" target="_blank">Free Web Tools</a>
 				<span class="mx-2">|</span>
 				<a href="#contact-us" class="text-muted" data-bs-toggle="modal" data-bs-target="#contact-us">Contact us</a>
 			</p>
@@ -266,7 +333,7 @@
 			</div>
 			<div class="modal-body">
 				<p class="display-6">MIT License</p>
-				<p>Copyright (c) 2022 cookienotice.github.io</p>
+				<p>Copyright (c) 2022 cookienotice.js.org</p>
 				<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 				<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 				<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
@@ -313,7 +380,7 @@
 
 	<div id="cookie-notice">
 	  We use cookies to deliver better experience.
-	  <a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer">More info...</a>
+	  <a href="https://cookienotice.js.org/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener">More info</a>
 	  <a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()">OK</a>
 	</div>
 

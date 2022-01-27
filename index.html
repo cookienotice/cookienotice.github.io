@@ -75,7 +75,7 @@
 
 				<h2 class="mb-4 text-center">Setup</h2>
 
-				<ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+				<ul class="nav nav-tabs d-flex justify-content-center" id="setupTab" role="tablist">
 					<li class="nav-item" role="presentation">
 						<button class="nav-link active" id="setup-internal-tab" data-bs-toggle="tab" data-bs-target="#setup-internal-content" type="button" role="setup-internal-content" aria-controls="home" aria-selected="true">Internal</button>
 					</li>
@@ -92,17 +92,17 @@
 						<h3 class="mt-4 mb-3 text-center">Internal installation <sup><small>(<a href="#why-internal" title="Why internal is recommended?" data-bs-toggle="modal" data-bs-target="#why-internal">why?</a>)</small></sup></h3>
 						<p class="text-center"><strong>Styles:</strong> Add the following code to your HTML <code>&lt;head&gt;&lt;/head&gt;</code> section.</p>
 						<div class="code-block position-relative mb-4">
-							<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#code-style-head" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
+							<button class="btn btn-sm btn-outline-secondary btn-copy" id="copy-code-style-head" data-clipboard-target="#code-style-head" data-bs-toggle="tooltip" title="Copy to clipboard" onclick="showCopiedText(this.id)">Copy</button>
 							<pre class="autoselect" id="code-style-head">&lt;style&gt;<br>#cookie-notice {<br>&#9;display: none;<br>&#9;position: fixed;<br>&#9;right: 0;<br>&#9;bottom: 0;<br>&#9;left: 0;<br>&#9;z-index: 999;<br>&#9;max-width: 450px;<br>&#9;margin: auto;<br>&#9;padding: 0.5rem;<br>&#9;border: 1px solid #eee;<br>&#9;background-color: #fefefe;<br>&#9;box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.05);<br>&#9;font-family: Arial, Helvetica, sans-serif;<br>&#9;line-height: 22px;<br>&#9;font-size: 15px;<br>&#9;text-align: center;<br>&#9;color: #555;<br>}<br>.cookie-notice-more {<br>&#9;margin: 0 0.25rem;<br>&#9;text-decoration-style: dashed;<br>&#9;color: inherit;<br>}<br>.cookie-notice-close {<br>&#9;padding: 0 0.5rem;<br>&#9;border: 1px solid #ddd;<br>&#9;border-radius: 0.125rem;<br>&#9;line-height: 20px;<br>&#9;text-decoration: none;<br>&#9;color: #888;<br>}<br>@media only screen and (min-width: 768px) {<br>&#9;#cookie-notice {<br>&#9;&#9;bottom: 1rem;<br>&#9;&#9;border-radius: 0.25rem;<br>&#9;}<br>&#9;.cookie-notice-close {<br>&#9;&#9;float: right;<br>&#9;}<br>}<br>&lt;/style&gt;</pre>
 						</div>
 						<p class="text-center"><strong>Notice block:</strong> Add the following code to your HTML <code>&lt;body&gt;&lt;/body&gt;</code> section.</p>
 						<div class="code-block position-relative mb-4">
-							<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#code-notice-body" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
-							<pre class="autoselect" id="code-notice-body">&lt;div id="cookie-notice"&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer"&gt;More info...&lt;/a&gt;<br>&#9;&lt;a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()"&gt;OK&lt;/a&gt;<br>&lt;/div&gt;</pre>
+							<button class="btn btn-sm btn-outline-secondary btn-copy" id="copy-internal-notice-body" data-clipboard-target="#code-notice-body" data-bs-toggle="tooltip" title="Copy to clipboard" onclick="showCopiedText(this.id)">Copy</button>
+							<pre class="autoselect" id="code-notice-body">&lt;div id="cookie-notice"&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href="https://cookienotice.js.org/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener"&gt;More info...&lt;/a&gt;<br>&#9;&lt;a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()"&gt;OK&lt;/a&gt;<br>&lt;/div&gt;</pre>
 						</div>
 						<p class="text-center"><strong>Script:</strong> Add the following code to your HTML footer before the <code>&lt;/body&gt;</code> closing tag.</p>
 						<div class="code-block position-relative mb-4">
-							<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#code-script-body" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
+							<button class="btn btn-sm btn-outline-secondary btn-copy" id="copy-code-script-body" data-clipboard-target="#code-script-body" data-bs-toggle="tooltip" title="Copy to clipboard" onclick="showCopiedText(this.id)">Copy</button>
 							<pre class="autoselect" id="code-script-body">&lt;script&gt;<br>function closeCookieNotice() {<br>&#9;const nowDate = new Date();<br>&#9;const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();<br>&#9;document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";<br>&#9;document.getElementById("cookie-notice").style.display = "none";<br>};<br>document.addEventListener("DOMContentLoaded", function() {<br>&#9;const cookie_notice = ('; ' + document.cookie).split('; cookie_notice=').pop().split(';')[0];<br>&#9;if (cookie_notice !== "0") {<br>&#9;&#9;document.getElementById("cookie-notice").style.display = "block";<br>&#9;}<br>});<br>&lt;/script&gt;</pre>
 						</div>
 					</div>
@@ -114,24 +114,24 @@
 						</p>
 						<p class="text-center"><strong>CSS:</strong> Add the following code to your HTML <code>&lt;head&gt;&lt;/head&gt;</code> section.</p>
 						<div class="code-block position-relative">
-							<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;/install_path/css/cookienotice.min.css&quot;&gt;</pre>
+							<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/css/cookienotice.min.css&quot;&gt;</pre>
 						</div>
 						<p class="or-sep text-center">OR</p>
 						<div class="code-block position-relative">
-							<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.github.io/cookienotice.min.css&quot;&gt;</pre>
+							<pre class="autoselect">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cookienotice.js.org/cookienotice.min.css&quot;&gt;</pre>
 						</div>
 						<p class="text-center"><strong>HTML:</strong> Add the following code to your HTML <code>&lt;body&gt;&lt;/body&gt;</code> section.</p>
 						<div class="code-block position-relative">
-							<button class="btn btn-sm btn-outline-secondary btn-copy" data-clipboard-target="#include-notice-body" data-bs-toggle="tooltip" title="Copy to clipboard">Copy</button>
-							<pre class="autoselect" id="include-notice-body">&lt;div id="cookie-notice"&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer"&gt;More info...&lt;/a&gt;<br>&#9;&lt;a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()"&gt;OK&lt;/a&gt;<br>&lt;/div&gt;</pre>
+							<button class="btn btn-sm btn-outline-secondary btn-copy" id="copy-external-notice-body" data-clipboard-target="#include-notice-body" data-bs-toggle="tooltip" title="Copy to clipboard" onclick="showCopiedText(this.id)">Copy</button>
+							<pre class="autoselect" id="include-notice-body">&lt;div id="cookie-notice"&gt;<br>&#9;We use cookies to deliver better experience.<br>&#9;&lt;a href="https://cookienotice.js.org/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener"&gt;More info...&lt;/a&gt;<br>&#9;&lt;a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()"&gt;OK&lt;/a&gt;<br>&lt;/div&gt;</pre>
 						</div>
 						<p class="text-center"><strong>JS:</strong> Add the following code to your HTML footer before the <code>&lt;/body&gt;</code> closing tag.</p>
 						<div class="code-block position-relative">
-							<pre class="autoselect">&lt;script src=&quot;/install_path/js/cookienotice.min.js&quot;&gt;&lt;/script&gt;</pre>
+							<pre class="autoselect">&lt;script src=&quot;dist/js/cookienotice.min.js&quot;&gt;&lt;/script&gt;</pre>
 						</div>
 						<p class="or-sep text-center">OR</p>
 						<div class="code-block position-relative">
-							<pre class="autoselect">&lt;script src=&quot;https://cookienotice.github.io/cookienotice.min.js&quot;&gt;&lt;/script&gt;</pre>
+							<pre class="autoselect">&lt;script src=&quot;https://cookienotice.js.org/cookienotice.min.js&quot;&gt;&lt;/script&gt;</pre>
 						</div>		
 					</div>
 
@@ -143,11 +143,11 @@
 						</p>
 						<p class="text-center"><strong>Add JavaScript:</strong> Add the following code to your HTML <code>&lt;head&gt;&lt;/head&gt;</code> section or in your HTML footer before the <code>&lt;/body&gt;</code> closing tag.</p>
 						<div class="code-block position-relative">
-							<pre class="autoselect">&lt;script src=&quot;/install_path/js/cookienotice.bundle.min.js&quot;&gt;&lt;/script&gt;</pre>
+							<pre class="autoselect">&lt;script src=&quot;dist/js/cookienotice.bundle.min.js&quot;&gt;&lt;/script&gt;</pre>
 						</div>
 						<p class="or-sep text-center">OR</p>
 						<div class="code-block position-relative">
-							<pre class="autoselect">&lt;script src=&quot;https://cookienotice.github.io/cookienotice.bundle.min.js&quot;&gt;&lt;/script&gt;</pre>
+							<pre class="autoselect">&lt;script src=&quot;https://cookienotice.js.org/cookienotice.bundle.min.js&quot;&gt;&lt;/script&gt;</pre>
 						</div>
 					</div>
 
@@ -254,7 +254,7 @@
 				<span class="mx-2">|</span>
 				<a href="./themes" class="text-muted" >Themes</a>
 				<span class="mx-2">|</span>
-				<a href="https://freetools.dev" class="text-muted" title="Try Free Tools For Web Developers" target="_blank">Free Web Tools</a>
+				<a href="https://freetools.dev/?ref=cookienotice.js.org" class="text-muted" title="Try Free Tools For Web Developers" target="_blank">Free Web Tools</a>
 				<span class="mx-2">|</span>
 				<a href="#contact-us" class="text-muted" data-bs-toggle="modal" data-bs-target="#contact-us">Contact us</a>
 			</p>
@@ -292,7 +292,7 @@
 			</div>
 			<div class="modal-body">
 				<p class="display-6">MIT License</p>
-				<p>Copyright (c) 2022 cookienotice.github.io</p>
+				<p>Copyright (c) 2022 cookienotice.js.org</p>
 				<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 				<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 				<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
@@ -339,7 +339,7 @@
 
 	<div id="cookie-notice">
 	  We use cookies to deliver better experience.
-	  <a href="https://cookienotice.github.io/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener noreferrer">More info</a>
+	  <a href="https://cookienotice.js.org/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener">More info</a>
 	  <a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()">OK</a>
 	</div>
 
