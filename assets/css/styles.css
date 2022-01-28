@@ -106,6 +106,14 @@ h1 {
 	color: #bbb !important;
 }
 
+/* Overrides */
+
+.adsbygoogle,
+.adsbygoogle ins {
+	display: block !important;
+	margin: 0 auto !important;
+}
+
 /* Utilities */
 
 .autoselect {  
