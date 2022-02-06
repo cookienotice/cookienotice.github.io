@@ -74,7 +74,7 @@ Add the JavaScript code below in your document ```head`` or before your ```</bod
 function closeCookieNotice() {
 	const nowDate = new Date();
 	const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();
-	document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";
+	document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";SameSite=Lax;";
 	document.getElementById("cookie-notice").style.display = "none";
 };
 document.addEventListener("DOMContentLoaded", function() {
