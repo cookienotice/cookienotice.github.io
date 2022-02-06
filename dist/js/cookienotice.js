@@ -1,9 +1,9 @@
-/*! Cookie Notice v.1.0.1 @ https://cookienotice.js.org */
+/*! Cookie Notice v.1.0.2 @ https://cookienotice.js.org */
 
 function closeCookieNotice() {
 	const nowDate = new Date();
 	const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();
-	document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";
+	document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + "; SameSite=Lax;";
 	document.getElementById("cookie-notice").style.display = "none";
 };
 
