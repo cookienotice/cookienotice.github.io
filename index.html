@@ -6,14 +6,20 @@
 	<meta name="description" content="🍪 Simple and easy to install Cookie Notice bar for your website. You can customize the Cookie Bar using themes. Fully mobile responsive.">
 	<meta name="tags" content="cookie, notice, cookie bar, eu cookies, law, cookies, cookie accept, cookie notification">
 	<meta name="google-site-verification" content="_8CsF_-sntKg6klWFyWmHjURkpeJNvXWDrxhMRr_ifk">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Simple Cookie Notice For Website | Lightweight solution, easy to install">
+	<meta property="og:description" content="🍪 Simple and easy to install Cookie Notice bar for your website. You can customize the Cookie Bar using themes. Fully mobile responsive..">
+	<meta property="og:image" content="./assets/img/social-preview.jpg">
+	<meta property="og:url" content="https://cookienotice.js.org">
+	<meta name="twitter:card" content="summary_large_image">
 	<title>Simple Cookie Notice For Website | Lightweight solution, easy to install</title>
-	<link rel="shortcut icon" href="./assets/img/favicon.png" />
+	<link rel="shortcut icon" href="./assets/img/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono&display=swap" as="style">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="./assets/css/styles.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto+Mono&display=swap">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 	<style>
 	#cookie-notice {
 		display: none;
@@ -107,7 +113,7 @@
 						<p class="text-center"><strong>Script:</strong> Add the following code to your HTML footer before the <code>&lt;/body&gt;</code> closing tag.</p>
 						<div class="code-block position-relative mb-4">
 							<button class="btn btn-sm btn-outline-secondary btn-copy" id="copy-code-script-body" data-clipboard-target="#code-script-body" data-bs-toggle="tooltip" title="Copy to clipboard" onclick="showCopiedText(this.id)">Copy</button>
-							<pre class="autoselect" id="code-script-body">&lt;script&gt;<br>function closeCookieNotice() {<br>&#9;const nowDate = new Date();<br>&#9;const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();<br>&#9;document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";<br>&#9;document.getElementById("cookie-notice").style.display = "none";<br>};<br>document.addEventListener("DOMContentLoaded", function() {<br>&#9;const cookie_notice = ('; ' + document.cookie).split('; cookie_notice=').pop().split(';')[0];<br>&#9;if (cookie_notice !== "0") {<br>&#9;&#9;document.getElementById("cookie-notice").style.display = "block";<br>&#9;}<br>});<br>&lt;/script&gt;</pre>
+							<pre class="autoselect" id="code-script-body">&lt;script&gt;<br>function closeCookieNotice() {<br>&#9;const nowDate = new Date();<br>&#9;const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();<br>&#9;document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";SameSite=Lax;";<br>&#9;document.getElementById("cookie-notice").style.display = "none";<br>};<br>document.addEventListener("DOMContentLoaded", function() {<br>&#9;const cookie_notice = ('; ' + document.cookie).split('; cookie_notice=').pop().split(';')[0];<br>&#9;if (cookie_notice !== "0") {<br>&#9;&#9;document.getElementById("cookie-notice").style.display = "block";<br>&#9;}<br>});<br>&lt;/script&gt;</pre>
 						</div>
 					</div>
 
@@ -436,7 +442,7 @@
 	function closeCookieNotice() {
 		const nowDate = new Date();
 		const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();
-		document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";";
+		document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";SameSite=Lax;";
 		document.getElementById("cookie-notice").style.display = "none";
 	};
 	document.addEventListener("DOMContentLoaded", function() {
