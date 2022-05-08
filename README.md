@@ -63,7 +63,7 @@ Add the HTML code block below before your ```</body>``` closing tag:
 ```
 <div id="cookie-notice">
 	We use cookies to deliver better experience.
-	<a href="https://cookienotice.js.org/about-cookies" class="cookie-notice-more" target="_blank" rel="noopener">More info</a>
+	<a href="https://about-cookies.eu.org" class="cookie-notice-more" target="_blank" rel="noopener">More info</a>
 	<a href="javascript:void(0)" class="cookie-notice-close" onclick="closeCookieNotice()">OK</a>
 </div>
 ```
@@ -74,7 +74,7 @@ Add the JavaScript code below in your document ```head`` or before your ```</bod
 function closeCookieNotice() {
 	const nowDate = new Date();
 	const expireDate = new Date(nowDate.setDate(nowDate.getDate() + 30)).toUTCString();
-	document.cookie = "cookie_notice=0;path=/;expires=" + expireDate + ";SameSite=Lax;";
+	document.cookie = "cookie_notice=0;path=/;expires="+ expireDate +";SameSite=Lax;";
 	document.getElementById("cookie-notice").style.display = "none";
 };
 document.addEventListener("DOMContentLoaded", function() {
